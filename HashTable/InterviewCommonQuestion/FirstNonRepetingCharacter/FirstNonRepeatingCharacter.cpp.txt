@@ -1,0 +1,16 @@
+#include "FirstNonRepeatingChar.h"
+
+
+char firstNonRepeatingChar(const string& input_string) {
+    // FINISH WRITING THE FIRSTNONREPEATINGCHAR FUNCTION HERE // 
+    unordered_map<char, int> charcount;
+    for (char c : input_string)
+    {
+        charcount[c]++;
+    }
+    for (char c : input_string)
+       {
+           if (charcount[c] == 1) {return c;}
+       }
+       return '\0';
+}
